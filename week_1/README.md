@@ -15,7 +15,7 @@
 
 ## 변수, 상수 작성
 
-![변수, 상수 작성 소스 코드](./scripts/write-const-var.js)
+[변수, 상수 작성 소스 코드](./scripts/write-const-var.js)
 
 ### 분석
 
@@ -69,7 +69,7 @@ const BACKGROUND_COLOR = "#eeeeee";
 
 ### 인사말 메시지
 
-![인사말 메시지 소스 코드](./scripts/greet-user.js)
+[인사말 메시지 소스 코드](./scripts/greet-user.js)
 
 #### 분석
 
@@ -91,7 +91,7 @@ function greetUser(username) {
 
 ### 원가 계산
 
-![원가 계산 소스 코드](./scripts/calc-original-price.js)
+[원가 계산 소스 코드](./scripts/calc-original-price.js)
 
 #### 분석
 
@@ -119,7 +119,7 @@ const calculateOriginalPrice = function (priceWithTax) {
 
 ### 술 판매 가능 여부
 
-![술 판매 가능 여부 소스 코드](./scripts/can-sell-alcohol.js)
+[술 판매 가능 여부 소스 코드](./scripts/can-sell-alcohol.js)
 
 #### 분석
 
@@ -147,7 +147,7 @@ const canSellAlcohol = (registrationCard) => {
 
 ### 할인가 계산
 
-![할인가 계산 소스 코드](./scripts/get-discounted-price.js)
+[할인가 계산 소스 코드](./scripts/get-discounted-price.js)
 
 #### 분석
 
@@ -176,7 +176,7 @@ function getDiscountedPrice(originalPrice, discountPercent) {
 
 ### 등급 판단
 
-![등급 판단 소스 코드](./scripts/get-grade-with-score.js)
+[등급 판단 소스 코드](./scripts/get-grade-with-score.js)
 
 #### 분석
 
