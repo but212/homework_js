@@ -11,7 +11,7 @@ let isLoggedIn = false;
 let userAge = 25;
 
 // 5. "상품 가격(예: 39,900원)"을 담는 변수를 작성하세요.
-let productPrice;
+let productPrice = "39,900원";
 
 // 6. 웹 페이지의 "배경색"을 담는 상수를 작성하고 적절한 값을 할당하세요.
 const BACKGROUND_COLOR = "#eeeeee";
