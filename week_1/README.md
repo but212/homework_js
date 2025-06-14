@@ -34,11 +34,7 @@ let userAge = 25;
 let productPrice = "39,900원";
 let commentCount = 12;
 let currentPageNumber = 3;
-let membershipLevel = {
-  vip: "VIP",
-  gold: "골드",
-  silver: "실버",
-};
+let membershipLevel = "골드";
 let isButtonClicked = true;
 ```
 
@@ -127,27 +123,21 @@ const calculateOriginalPrice = function (priceWithTax) {
 
 #### 분석
 
-19세 이상이면 true, 미만이면 false를 반환하는 함수를
-화살표 함수로 작성해야 합니다.
-if문을 활용하여 19세 미만이면 false를 early return, 그렇지 않은 경우
-기본 리턴으로 true가 반환되도록 설정해야 합니다.
+registrationCard의 멤버 변수 age가 19 이상이면 true,
+미만이면 false를 반환하는 함수를 화살표 함수로 작성해야 합니다.
 
 #### 구현 결과
 
 ```javascript
-const canSellAlcohol = (registrationCard) => {
-  if (registrationCard < 19) {
-    return false;
-  }
-
-  return true;
-};
+const canSellAlcohol = (registrationCard) => registrationCard.age >= 19;
 ```
 
 #### 느낀점
 
-분기문을 사용한 간단한 함수이며 누구나 프로그래밍을 배웠다면
-이 정도는 쉽게 만들 수 있을 것입니다.
+처음에는 분기문을 활용했는데 코드를 복기해보니까 Boolean이라서 분기문이
+필요없다는 걸 깨달았습니다. 그리고 registrationCard를 그대로 나이 변수로 사용했는데
+그것도 복기하다보니 어색해서 객체, 객체 안의 변수 형태로 바꿨습니다. 항상 복기해보고
+좋은 방식이 있는지 찾아보는 습관을 들여야 할 것 같습니다.
 
 ### 할인가 계산
 
