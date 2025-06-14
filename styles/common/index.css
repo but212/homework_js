@@ -1,3 +1,5 @@
 @import "./reset.css";
 @import "./base.css";
 @import "./variable.css";
+@import "./component.css";
+@import "./a11y.css";
