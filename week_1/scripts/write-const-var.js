@@ -1,0 +1,21 @@
+let myName = "석정일";
+const ABSOLUTE_ZERO = "-273.15°C";
+let isLoggedIn = false;
+let userAge = 25;
+let productPrice = "39,900원";
+const BACKGROUND_COLOR = "#eeeeee";
+let commentCount = 12;
+let currentPageNumber = 3;
+let membershipLevel = "골드";
+let isButtonClicked = true;
+
+console.log(myName);
+console.log(ABSOLUTE_ZERO);
+console.log(isLoggedIn);
+console.log(userAge);
+console.log(productPrice);
+console.log(BACKGROUND_COLOR);
+console.log(commentCount);
+console.log(currentPageNumber);
+console.log(membershipLevel);
+console.log(isButtonClicked);
