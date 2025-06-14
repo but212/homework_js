@@ -41,3 +41,4 @@ console.log(getGradeWithScore(100));
 console.log(getGradeWithScore(50));
 console.log(getGradeWithScore(101));
 console.log(getGradeWithScore(-1));
+console.log(getGradeWithScore("100"));
