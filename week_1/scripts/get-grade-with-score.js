@@ -1,13 +1,11 @@
 function getGradeWithScore(score) {
-  if (score < 0 || score > 100) {
+  if (score < 0 || score > 100 || typeof score !== "number") {
     return {
       score: score,
       grade: null,
       description: "유효하지 않은 점수입니다.",
     };
   }
-
-  let currentGrade = "";
 
   const GRADE_TABLE = {
     A: "매우 우수",
@@ -17,6 +15,8 @@ function getGradeWithScore(score) {
     F: "낙제",
   };
 
+  let currentGrade;
+
   if (score >= 90) {
     currentGrade = "A";
   } else if (score >= 80) {
@@ -25,7 +25,7 @@ function getGradeWithScore(score) {
     currentGrade = "C";
   } else if (score >= 60) {
     currentGrade = "D";
-  } else if (score >= 0) {
+  } else {
     currentGrade = "F";
   }
 
