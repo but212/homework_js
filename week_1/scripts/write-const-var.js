@@ -23,11 +23,7 @@ let commentCount = 12;
 let currentPageNumber = 3;
 
 // 9. "회원 등급('VIP', '골드', '실버' 중 하나)"을 담는 변수를 작성해보세요.
-let membershipLevel = {
-  vip: "VIP",
-  gold: "골드",
-  silver: "실버",
-};
+let membershipLevel = "골드";
 
 // 10. "버튼이 클릭되었는지 여부"를 담는 변수를 선언하고 불리언 타입 값을 설정하세요.
 let isButtonClicked = true;
@@ -41,7 +37,4 @@ console.log("BACKGROUND_COLOR: " + BACKGROUND_COLOR);
 console.log("commentCount: " + commentCount);
 console.log("currentPageNumber: " + currentPageNumber);
 console.log("membershipLevel: " + membershipLevel);
-console.log("membershipLevel.vip: " + membershipLevel.vip);
-console.log("membershipLevel.gold: " + membershipLevel.gold);
-console.log("membershipLevel.silver: " + membershipLevel.silver);
 console.log("isButtonClicked: " + isButtonClicked);
