@@ -34,7 +34,11 @@ let userAge = 25;
 let productPrice = "39,900원";
 let commentCount = 12;
 let currentPageNumber = 3;
-let membershipLevel = "골드";
+let membershipLevel = {
+  vip: "VIP",
+  gold: "골드",
+  silver: "실버",
+};
 let isButtonClicked = true;
 ```
 

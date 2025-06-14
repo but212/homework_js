@@ -6,7 +6,11 @@ let productPrice = "39,900원";
 const BACKGROUND_COLOR = "#eeeeee";
 let commentCount = 12;
 let currentPageNumber = 3;
-let membershipLevel = "골드";
+let membershipLevel = {
+  vip: "VIP",
+  gold: "골드",
+  silver: "실버",
+};
 let isButtonClicked = true;
 
 console.log(myName);
@@ -18,4 +22,7 @@ console.log(BACKGROUND_COLOR);
 console.log(commentCount);
 console.log(currentPageNumber);
 console.log(membershipLevel);
+console.log(membershipLevel.vip);
+console.log(membershipLevel.gold);
+console.log(membershipLevel.silver);
 console.log(isButtonClicked);
