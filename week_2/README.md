@@ -84,6 +84,43 @@ dd {
 ## button 안에 p 태그를 span으로 변경경
 validate HTML을 돌리니 버튼안에 p태그를 사용을 못하게 했기에 span으로 변경했습니다.
 
+
+## 접근성 문제
+
+스크린 리더 사용자가 버튼에 접근할 때 지금 아코디언이 열려있는지 닫혀있는지 알 수 있도록 하고 싶었습니다. 이 문제는 AI에게 물어봤는데 aria-expanded와 aria-controls="[콘텐츠 ID]"를 사용하면 해결할 수 있다고 했습니다. 그리고 각 아코디언에 id를 부여하고 main.js를 바뀐 코드에 맞춰서 수정하게 했습니다.
+
+```html
+<!-- 구버전 -->
+<div class="accordion">
+  <button type="button" class="item">
+    <span class="title">
+      텍스트 바꾸기 좋은 피그마 플러그인은 뭐가 있을까요? 추천
+      해주세요.
+    </span>
+    <img class="arrow" src="./images/arrow-down.svg" alt="" />
+  </button>
+  <div class="content">
+    font replacer를 사용해 보세요. 미리보기 기능을 지원해서 편의성 짱짱짱입니다.
+  </div>
+</div>
+
+<!-- 신버전 -->
+<div class="accordion">
+  <button type="button" class="item" aria-expanded="false" aria-controls="accordion-panel-1">
+    <span class="title">
+      텍스트 바꾸기 좋은 피그마 플러그인은 뭐가 있을까요? 추천
+      해주세요.
+    </span>
+    <img class="arrow" src="./images/arrow-down.svg" alt="" />
+  </button>
+  <div class="content" id="accordion-panel-1" role="region">
+    font replacer를 사용해 보세요. 미리보기 기능을 지원해서 편의성 짱짱짱입니다.
+  </div>
+</div>
+```
+
+
+
 ## 느낀점
 
 시간이 촉박하니 조금씩 수정하던 과제를 금요일에 거의 벼락치기 하듯이 풀어나가서
