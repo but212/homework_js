@@ -59,24 +59,8 @@ space-between으로 정렬됩니다. 그리고 content는 item 바깥으로
 ## reset.css 문제
 
 p.title의 위에 임의의 margin이 생겼고 이는 p태그의 기본값 때문입니다.
-reset.css에서 p태그의 margin설정이 margin-block-end 만 0으로 설정되어있었습니다.
-
-```css
-body,
-h1,
-h2,
-h3,
-h4,
-p,
-figure,
-blockquote,
-dl,
-dd {
-  margin-block-end: 0;
-}
-```
-
-그래서 margin-block-start: 0을 추가해서 임의의 공간이 없어졌습니다.
+[A More Modern CSS Reset](https://piccalil.li/blog/a-more-modern-css-reset/)의 내용으로
+reset.css를 수정했습니다.
 
 ## button 안에 p 태그를 span으로 변경
 validate HTML을 돌리니 버튼안에 p태그를 사용을 못하게 했기에 span으로 변경했습니다.
