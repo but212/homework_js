@@ -81,7 +81,7 @@ dd {
 
 그래서 margin-block-start: 0을 추가해서 임의의 공간이 없어졌습니다.
 
-## button 안에 p 태그를 span으로 변경경
+## button 안에 p 태그를 span으로 변경
 validate HTML을 돌리니 버튼안에 p태그를 사용을 못하게 했기에 span으로 변경했습니다.
 
 
