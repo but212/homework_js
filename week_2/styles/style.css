@@ -1,9 +1,110 @@
-.accordion {
-  .item {
+:root {
+  --app-height: 812px;
+  --app-width: 376px;
+  --accordian-width: 340px;
+  --accordian-height: 100px;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--color-gray-200);
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.flex-body {
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.app {
+  padding-top: var(--spacing-md);
+  background-color: var(--color-white);
+  border-radius: var(--radius-md);
+  height: var(--app-height);
+  width: var(--app-width);
+  padding-inline: var(--spacing-sm);
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: var(--spacing-md);
+    padding-bottom: var(--spacing-md);
+    border-bottom: var(--border-width-thin) solid var(--color-gray-100);
+
+    .header-logo {
+      height: 24px;
+      width: 88px;
+    }
+    .header-menu {
+      height: 24px;
+      width: 24px;
+    }
+  }
+
+  main {
+    padding-top: var(--spacing-xl);
+  }
+
+  .faq-title {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-bold);
+    margin-bottom: var(--spacing-xl);
+  }
+
+  .faq-title img {
+    width: 44px;
+    height: 44px;
+  }
+
+  .accordion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: var(--accordian-width);
+    border-radius: var(--radius-md);
+    margin-bottom: var(--spacing-md);
+    background-color: var(--color-gray-100);
+
+    .item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      padding: var(--font-size-xl);
+      text-align: left;
+
+      .title {
+        font-weight: var(--font-weight-bold);
+        margin-right: var(--spacing-sm);
+        line-height: var(--line-height-normal);
+      }
+
+      .arrow {
+        flex-shrink: 0;
+      }
+    }
     .content {
+      font-weight: var(--font-weight-normal);
+      padding: 0 20px 20px;
       display: none;
-      &.is-active {
+      line-height: var(--line-height-normal);
+    }
+    &.is-active {
+      .content {
         display: block;
+      }
+      .arrow {
+        transform: rotate(180deg);
       }
     }
   }

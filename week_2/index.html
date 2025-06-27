@@ -4,51 +4,99 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>아코디언예제</title>
+    <link
+      rel="stylesheet"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
+    />
+    <link rel="stylesheet" href="../styles/common/index.css" />
     <link rel="stylesheet" href="./styles/style.css" />
   </head>
   <body>
-    <div class="accordion">
-      <p>아이템 1</p>
-      <div class="item">
-        <button class="title">
-          <svg
-            width="14"
-            height="8"
-            viewBox="0 0 14 8"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M1 1L7 7L13 1"
-              stroke="black"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
-        </button>
-        <div class="content">내용 1</div>
-      </div>
-      <div class="item">
-        <p>아이템 2</p>
-        <button class="title">
-          <svg
-            width="14"
-            height="8"
-            viewBox="0 0 14 8"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M1 1L7 7L13 1"
-              stroke="black"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
-        </button>
-        <div class="content">내용 2</div>
+    <div class="flex-body">
+      <div class="app">
+        <header>
+          <h1 class="header-logo">
+            <img src="./images/header-logo.svg" alt="피그마 튜터" />
+          </h1>
+          <button type="button" class="header-menu">
+            <img src="./images/header-menu.svg" alt="" />
+          </button>
+        </header>
+        <main>
+          <h2 class="faq-title">
+            자주 묻는 질문
+            <img src="./images/face-image.png" alt="" />
+          </h2>
+          <div class="accordion">
+            <button type="button" class="item">
+              <span class="title">
+                텍스트 바꾸기 좋은 피그마 플러그인은 뭐가 있을까요? 추천
+                해주세요.
+              </span>
+              <img
+                class="arrow"
+                src="./images/arrow-down.svg"
+                alt="열기 버튼"
+              />
+            </button>
+            <div class="content">
+              font replacer를 사용해 보세요. 미리보기 기능을 지원해서 편의성
+              짱짱짱입니다.
+            </div>
+          </div>
+          <div class="accordion">
+            <button type="button" class="item">
+              <span class="title">
+                텍스트 바꾸기 좋은 피그마 플러그인은 뭐가 있을까요? 추천
+                해주세요.
+              </span>
+              <img
+                class="arrow"
+                src="./images/arrow-down.svg"
+                alt="열기 버튼"
+              />
+            </button>
+            <div class="content">
+              font replacer를 사용해 보세요. 미리보기 기능을 지원해서 편의성
+              짱짱짱입니다.
+            </div>
+          </div>
+          <div class="accordion">
+            <button type="button" class="item">
+              <span class="title">
+                텍스트 바꾸기 좋은 피그마 플러그인은 뭐가 있을까요? 추천
+                해주세요.
+              </span>
+              <img
+                class="arrow"
+                src="./images/arrow-down.svg"
+                alt="열기 버튼"
+              />
+            </button>
+            <div class="content">
+              font replacer를 사용해 보세요. 미리보기 기능을 지원해서 편의성
+              짱짱짱입니다.
+            </div>
+          </div>
+          <div class="accordion">
+            <button type="button" class="item">
+              <span class="title">
+                텍스트 바꾸기 좋은 피그마 플러그인은 뭐가 있을까요? 추천
+                해주세요.
+              </span>
+              <img
+                class="arrow"
+                src="./images/arrow-down.svg"
+                alt="열기 버튼"
+              />
+            </button>
+            <div class="content">
+              font replacer를 사용해 보세요. 미리보기 기능을 지원해서 편의성
+              짱짱짱입니다.
+            </div>
+          </div>
+        </main>
       </div>
     </div>
     <script src="./scripts/main.js"></script>
