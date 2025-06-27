@@ -20,15 +20,15 @@ button {
   display: flex;
   justify-content: center;
   min-height: 100vh;
+
 }
 
 .app {
-  padding-top: var(--spacing-md);
+  padding: var(--spacing-lg);
   background-color: var(--color-white);
   border-radius: var(--radius-md);
   height: var(--app-height);
   width: var(--app-width);
-  padding-inline: var(--spacing-sm);
 
   header {
     display: flex;
@@ -73,7 +73,7 @@ button {
     min-width: var(--accordian-width);
     border-radius: var(--radius-md);
     margin-bottom: var(--spacing-md);
-    background-color: var(--color-gray-100);
+    background-color: #eef4ff;
 
     .item {
       display: flex;
