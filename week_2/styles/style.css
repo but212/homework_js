@@ -41,6 +41,9 @@ button {
     .header-logo {
       height: 24px;
       width: 88px;
+      img {
+        margin: 0;
+      }
     }
     .header-menu {
       height: 24px;
