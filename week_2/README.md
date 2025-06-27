@@ -3,8 +3,10 @@
 아코디언 컴포넌트를 만들어보았습니다.
 
 ## 아코디언 구조 설계
+
 먼저 아코디언의 구조를 설계했습니다.
 원래는
+
 ```js
 <div class="accordion">
   <p>아이템 1</p>
@@ -52,8 +54,8 @@ item을 flex로 구현할 때 예제와 같은 레이아웃이 나오게 됩니�
 </div>
 ```
 
-이 구조에서는 item이 버튼으로 작동하며 title과 arrow가 flex, 
-space-between으로 정렬됩니다. 그리고 content는 item 바깥으로 
+이 구조에서는 item이 버튼으로 작동하며 title과 arrow가 flex,
+space-between으로 정렬됩니다. 그리고 content는 item 바깥으로
 위치해 accordion이 is-active될때 block이 되도록 설정했습니다.
 
 ## reset.css 문제
@@ -63,8 +65,8 @@ p.title의 위에 임의의 margin이 생겼고 이는 p태그의 기본값 때�
 reset.css를 수정했습니다.
 
 ## button 안에 p 태그를 span으로 변경
-validate HTML을 돌리니 버튼안에 p태그를 사용을 못하게 했기에 span으로 변경했습니다.
 
+validate HTML을 돌리니 버튼안에 p태그를 사용을 못하게 했기에 span으로 변경했습니다.
 
 ## 접근성 문제
 
@@ -75,8 +77,7 @@ validate HTML을 돌리니 버튼안에 p태그를 사용을 못하게 했기에
 <div class="accordion">
   <button type="button" class="item">
     <span class="title">
-      텍스트 바꾸기 좋은 피그마 플러그인은 뭐가 있을까요? 추천
-      해주세요.
+      텍스트 바꾸기 좋은 피그마 플러그인은 뭐가 있을까요? 추천 해주세요.
     </span>
     <img class="arrow" src="./images/arrow-down.svg" alt="" />
   </button>
@@ -87,10 +88,14 @@ validate HTML을 돌리니 버튼안에 p태그를 사용을 못하게 했기에
 
 <!-- 신버전 -->
 <div class="accordion">
-  <button type="button" class="item" aria-expanded="false" aria-controls="accordion-panel-1">
+  <button
+    type="button"
+    class="item"
+    aria-expanded="false"
+    aria-controls="accordion-panel-1"
+  >
     <span class="title">
-      텍스트 바꾸기 좋은 피그마 플러그인은 뭐가 있을까요? 추천
-      해주세요.
+      텍스트 바꾸기 좋은 피그마 플러그인은 뭐가 있을까요? 추천 해주세요.
     </span>
     <img class="arrow" src="./images/arrow-down.svg" alt="" />
   </button>
@@ -100,8 +105,7 @@ validate HTML을 돌리니 버튼안에 p태그를 사용을 못하게 했기에
 </div>
 ```
 
-
-
 ## 느낀점
 
-조금씩 수정하던 과제를 금요일에 거의 벼락치기 하듯이 풀어나갔습니다.
+조금씩 수정하던 과제였는데 여러가지 문제가 발생했고
+이것을 풀어가는 과정에서 힘들었지만 뿌듯하게 풀어나갔습니다.
