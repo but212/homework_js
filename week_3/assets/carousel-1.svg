@@ -1,0 +1,33 @@
+<svg width="100%" height="100%" viewBox="0 0 400 300" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1,0,0,1,-1.13687e-13,22.5809)">
+        <g transform="matrix(1,0,0,1,0,-22.5809)">
+            <g transform="matrix(1,0,0,1,375,45)">
+                <path d="M0,100L0,82L-60,82L-60,59L-10,59L-10,41L-60,41L-60,18L0,18L0,0L-80,0L-80,100L0,100Z" style="fill:rgb(235,235,235);fill-rule:nonzero;"/>
+            </g>
+            <g transform="matrix(1,0,0,1,285,45)">
+                <path d="M0,100L-20,100L-20,18L-30,18L-30,100L-50,100L-50,18L-60,18L-60,100L-80,100L-80,0L0,0L0,100Z" style="fill:rgb(235,235,235);fill-rule:nonzero;"/>
+            </g>
+            <g transform="matrix(1,0,0,1,0,-110)">
+                <path d="M135,173L175,173L175,195L135,195L135,173ZM115,155L115,255L135,255L135,213L175,213L175,255L195,255L195,155L115,155Z" style="fill:rgb(235,235,235);fill-rule:nonzero;"/>
+            </g>
+            <g transform="matrix(1,0,0,1,105,45)">
+                <path d="M0,100L0,40L-40,40L-40,58L-20,58L-20,82L-60,82L-60,18L-18,18L0,0L-80,0L-80,100L0,100Z" style="fill:rgb(235,235,235);fill-rule:nonzero;"/>
+            </g>
+            <g transform="matrix(1,0,0,1,195,155)">
+                <path d="M0,100L0,82L-60,82L-60,59L-10,59L-10,41L-60,41L-60,18L0,18L0,0L-80,0L-80,100L0,100Z" style="fill:rgb(235,235,235);fill-rule:nonzero;"/>
+            </g>
+            <g transform="matrix(1,0,0,1,85,255)">
+                <path d="M0,-100L0,-34.898L-37.311,-100L-60,-100L-60,0L-40,0L-40,-65.102L-2.689,0L20,0L20,-100L0,-100Z" style="fill:rgb(235,235,235);fill-rule:nonzero;"/>
+            </g>
+            <g transform="matrix(1,0,0,1,285,255)">
+                <path d="M0,-100L-80,-100L-80,-82L-50,-82L-50,0L-30,0L-30,-82L0,-82L0,-100Z" style="fill:rgb(235,235,235);fill-rule:nonzero;"/>
+            </g>
+            <g transform="matrix(1,0,0,1,0,192)">
+                <rect x="295" y="45" width="20" height="18" style="fill:rgb(235,235,235);"/>
+            </g>
+        </g>
+        <g transform="matrix(0.754764,0,0,0.852493,-501.161,-319.07)">
+            <rect x="663.997" y="347.791" width="529.967" height="351.909" style="fill:none;"/>
+        </g>
+    </g>
+</svg>

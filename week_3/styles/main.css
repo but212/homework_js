@@ -1,0 +1,46 @@
+:root {
+  --primary-color: #202020;
+  --secondary-color: #ebebeb;
+}
+
+.carousel {
+  display: flex;
+  width: 500px;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+
+  .carousel__container {
+    display: flex;
+    padding: 50px 42px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 80px;
+    justify-items: center;
+    border: 8px solid var(--secondary-color, #ebebeb);
+    background: var(--primary-color, #202020);
+    box-shadow: 9px 9px 0px 0px var(--secondary-color, #ebebeb);
+
+    .carousel__contents {
+      display: flex;
+      width: 400px;
+      height: 300px;
+      flex-direction: row;
+      align-items: center;
+      padding-inline-start: 0;
+      margin-block-start: 0;
+      margin-block-end: 0;
+      border: none;
+      background: var(--primary-color, #202020);
+      overflow: hidden;
+
+      .carousel__content {
+        width: 400px;
+        height: 300px;
+        flex-shrink: 0;
+      }
+    }
+  }
+}
