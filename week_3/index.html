@@ -4,18 +4,30 @@
     <meta charset="UTF-8" />
     <title>캐러셀(Carousel)</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="3주차 과제 - 캐러셀(Carousel) 컴포넌트 구현 예제입니다."
+    />
+
     <link
       rel="stylesheet"
-      as="style"
       crossorigin
       href="https://cdnjs.cloudflare.com/ajax/libs/pretendard/1.3.9/variable/pretendardvariable-dynamic-subset.min.css"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles/common/index.css" />
     <link rel="stylesheet" href="./styles/main.css" />
     <style>
       .app {
         display: flex;
         width: 600px;
         padding: 35px 50px;
+        justify-self: center;
         justify-content: center;
         align-items: center;
         background: var(--primary-color, #202020);
@@ -25,21 +37,58 @@
   <body>
     <div class="app">
       <section class="carousel">
-        <div class="carousel__container">
-          <ul class="carousel__contents">
-            <li class="carousel__content">
-              <a href="#"><img src="./assets/carousel-1.svg" alt="" /></a>
-            </li>
-            <li class="carousel__content">
-              <a href="#"><img src="./assets/carousel-2.svg" alt="" /></a>
-            </li>
-            <li class="carousel__content">
-              <a href="#"><img src="./assets/carousel-3.svg" alt="" /></a>
-            </li>
-          </ul>
+        <h2 class="carousel__title">GAMENET</h2>
+        <div class="carousel__body">
+          <div class="carousel__container">
+            <ul class="carousel__contents">
+              <li class="carousel__content">
+                <a href="#" aria-label="캐러셀 컨텐츠 1"
+                  ><img src="./assets/carousel-1.svg" alt=""
+                /></a>
+              </li>
+              <li class="carousel__content">
+                <a href="#" aria-label="캐러셀 컨텐츠 2"
+                  ><img src="./assets/carousel-2.svg" alt=""
+                /></a>
+              </li>
+              <li class="carousel__content">
+                <a href="#" aria-label="캐러셀 컨텐츠 3"
+                  ><img src="./assets/carousel-3.svg" alt=""
+                /></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="carousel__controls">
+          <button type="button" class="carousel__prev__button">
+            <img src="./assets/prev-button-arrow-white.svg" alt="이전" />
+          </button>
+          <div class="carousel__indicator">
+            <button
+              type="button"
+              class="carousel__indicator__button"
+              aria-label="1번째 페이지"
+            ></button>
+            <button
+              type="button"
+              class="carousel__indicator__button"
+              aria-label="2번째 페이지"
+            ></button>
+            <button
+              type="button"
+              class="carousel__indicator__button"
+              aria-label="3번째 페이지"
+            ></button>
+          </div>
+          <button type="button" class="carousel__next__button">
+            <img src="./assets/next-button-arrow-white.svg" alt="다음" />
+          </button>
         </div>
       </section>
     </div>
     <script src="./scripts/main.js"></script>
+    <script>
+      init(0);
+    </script>
   </body>
 </html>
