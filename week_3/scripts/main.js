@@ -49,6 +49,14 @@ function updateCarousel(newIndex) {
     }
   });
 
+  carouselIndicatorButtons.forEach((button, index) => {
+    if (index === newIndex) {
+      button.setAttribute("tabindex", "-1");
+    } else {
+      button.setAttribute("tabindex", "0");
+    }
+  });
+
   if (newIndex === 0) {
     carouselPrevButton.classList.add("is-unactive");
     carouselPrevButton.children[0].setAttribute(
