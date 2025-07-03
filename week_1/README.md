@@ -17,7 +17,7 @@
 
 [변수, 상수 작성 소스 코드](./scripts/write-const-var.js)
 
-### 분석
+### 분석 - 변수, 상수 작성
 
 변수, 상수 작성은 let과 const로 작성했으며 고유의 컨벤션을 가져야합니다.
 자바스크립트에서 관습적으로 따르는 컨벤션을 따르는 것이 좋다고 판단했습니다.
@@ -38,7 +38,7 @@ let membershipLevel = "골드";
 let isButtonClicked = true;
 ```
 
-#### 느낀점
+#### 느낀점 - 변수 작성
 
 변수를 선언하고 사용하는 것은 어렵지 않지만 네이밍 컨벤션은
 일반적인 JS 코드와 일치하면 좋기에 따랐습니다. 하지만 개인적으로는
@@ -53,14 +53,14 @@ const ABSOLUTE_ZERO = "-273.15°C";
 const BACKGROUND_COLOR = "#eeeeee";
 ```
 
-#### 느낀점
+#### 느낀점 - 상수 작성
 
 상수의 이름이 대문자로 눈에 확 띄어서 아 이거 상수구나 하는 느낌을 받았습니다.
 제가 주로 쓰던 rust언어의 상수 네이밍 컨벤션과 비슷하네요.
 
 ## 함수 작성
 
-### 분석
+### 분석 - 함수 작성
 
 함수는 프로그래밍에서 중복되는 코드 조각을 따로 정의해둔 것,
 그 이상도 이하도 아니라고 생각합니다. 일반적인 자바스크립트 컨벤션에 맞게
@@ -71,12 +71,12 @@ const BACKGROUND_COLOR = "#eeeeee";
 
 [인사말 메시지 소스 코드](./scripts/greet-user.js)
 
-#### 분석
+#### 분석 - 인사말 메시지
 
 유저 네임을 받아 인사말을 뱉는 함수이며 return을 통해 문자열이 반환되도록
 구현될 수 있습니다.
 
-#### 구현 결과
+#### 구현 결과 - 인사말 메시지
 
 ```javascript
 function greetUser(username) {
@@ -84,7 +84,7 @@ function greetUser(username) {
 }
 ```
 
-#### 느낀점
+#### 느낀점 - 인사말 메시지
 
 사실 이것이 함수의 본질이라고 생각합니다. 적절한 인수를 받아서 적절하게
 처리하는 것이 본질이며 간단한 함수라도 이 본질은 가지고 있다고 생각합니다.
@@ -93,7 +93,7 @@ function greetUser(username) {
 
 [원가 계산 소스 코드](./scripts/calc-original-price.js)
 
-#### 분석
+#### 분석 - 원가 계산
 
 세율 3.3%의 세후 가격을 활용해서 세전가격을 리턴하는 함수를
 함수 표현식으로 작성해야 합니다.
@@ -101,7 +101,7 @@ function greetUser(username) {
 하드코딩되며 이를 활용해서 세후가격에서 세전가격을 추출해야 합니다.
 priceWithTax를 1.033으로 나누면 세전가격이 나올 것입니다.
 
-#### 구현 결과
+#### 구현 결과 - 원가 계산
 
 ```javascript
 const TAX_RATIO = 0.033; // 3.3%
@@ -111,7 +111,7 @@ const calculateOriginalPrice = function (priceWithTax) {
 };
 ```
 
-#### 느낀점
+#### 느낀점 - 원가 계산
 
 이것 또한 너무 간단한 식이지만 TAX_RATIO는 직관적으로 바로
 3.3%라고 생각될 수 없기에 주석을 통해 3.3%임을 알리는 것이 좋다고
@@ -121,18 +121,18 @@ const calculateOriginalPrice = function (priceWithTax) {
 
 [술 판매 가능 여부 소스 코드](./scripts/can-sell-alcohol.js)
 
-#### 분석
+#### 분석 - 술 판매 가능 여부
 
 registrationCard의 멤버 변수 age가 19 이상이면 true,
 미만이면 false를 반환하는 함수를 화살표 함수로 작성해야 합니다.
 
-#### 구현 결과
+#### 구현 결과 - 술 판매 가능 여부
 
 ```javascript
 const canSellAlcohol = (registrationCard) => registrationCard.age >= 19;
 ```
 
-#### 느낀점
+#### 느낀점 - 술 판매 가능 여부
 
 처음에는 분기문을 활용했는데 코드를 복기해보니까 Boolean이라서 분기문이
 필요없다는 걸 깨달았습니다. 그리고 registrationCard를 그대로 나이 변수로 사용했는데
@@ -143,14 +143,14 @@ const canSellAlcohol = (registrationCard) => registrationCard.age >= 19;
 
 [할인가 계산 소스 코드](./scripts/get-discounted-price.js)
 
-#### 분석
+#### 분석 - 할인가 계산
 
 원래 가격과 할인율을 입력받아 할인된 가격을 반환하는 함수를 만들어야 합니다.
 함수 사용자가 할인율을 20으로 쓸지 "20%"로 쓸지 알 수 없기 때문에 이 부분에 대한
 처리를 해야합니다. 할인율이 문자열로 들어오면 parseInt를 통해 숫자로 변환하고,
 원래 가격에서 할인율을 계산하여 최종 가격을 반환해야 합니다.
 
-#### 구현 결과
+#### 구현 결과 - 할인가 계산
 
 ```javascript
 function getDiscountedPrice(originalPrice, discountPercent) {
@@ -162,7 +162,7 @@ function getDiscountedPrice(originalPrice, discountPercent) {
 }
 ```
 
-#### 느낀점
+#### 느낀점 - 할인가 계산
 
 원가격에 할인하는 개념이기에 세전 가격을 반환하는 함수와 계산식이 살짝 달라졌는데
 처음에는 조금 헷갈렸습니다. 처음 과제를 보자마자 string 매개변수가 쓰일 수 있다는 것이
@@ -172,7 +172,7 @@ function getDiscountedPrice(originalPrice, discountPercent) {
 
 [등급 판단 소스 코드](./scripts/get-grade-with-score.js)
 
-#### 분석
+#### 분석 - 등급 판단
 
 점수를 매개변수로 받아 해당하는 등급과 설명을 반환하는 함수입니다.
 87을 매개변수로 전달했다면 아래와 같은 구조체로 반환해야 합니다.
@@ -192,7 +192,7 @@ function getDiscountedPrice(originalPrice, discountPercent) {
 | D    | 미달, 통과 기준 근접 |
 | F    | 낙제                 |
 
-#### 구현 결과
+#### 구현 결과 - 등급 판단
 
 ```javascript
 function getGradeWithScore(score) {
@@ -234,7 +234,7 @@ function getGradeWithScore(score) {
 }
 ```
 
-#### 느낀점
+#### 느낀점 - 등급 판단
 
 먼저 유효하지 않은 점수를 똑같은 형식의 객체로 리턴했는데
 값의 일관성을 통해 예측가능하고 더욱 안전한 코드를 만들 수 있다고
