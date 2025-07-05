@@ -1,0 +1,49 @@
+/* Font definitions for Abril Fatface and NanumSquareNeo */
+
+@font-face {
+    font-family: 'Abril Fatface';
+    src: url('assets/Abril_Fatface/AbrilFatface-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NanumSquareNeo';
+    src: url('assets/NanumSquareNeoOTF/NanumSquareNeoOTF-Lt.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NanumSquareNeo';
+    src: url('assets/NanumSquareNeoOTF/NanumSquareNeoOTF-Rg.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NanumSquareNeo';
+    src: url('assets/NanumSquareNeoOTF/NanumSquareNeoOTF-Bd.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NanumSquareNeo';
+    src: url('assets/NanumSquareNeoOTF/NanumSquareNeoOTF-Eb.otf') format('opentype');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NanumSquareNeo';
+    src: url('assets/NanumSquareNeoOTF/NanumSquareNeoOTF-Hv.otf') format('opentype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
