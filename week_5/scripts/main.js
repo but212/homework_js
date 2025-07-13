@@ -20,49 +20,55 @@ function init(
     const keyButtonType = key.dataset.buttonType;
     const lookupTableButtonType = {
       number: () => {
-        if (memoObject.isNewNumber || display.textContent === "0") {
+        const previousKeyIsEqual = memoObject.previousKeyButtonType === "equal";
+        if (
+          memoObject.isNewNumber ||
+          display.textContent === "0" ||
+          previousKeyIsEqual
+        ) {
           display.textContent = keyType;
-          memoObject.isNewNumber = false;
         } else {
           display.textContent += keyType;
         }
+        memoObject.isNewNumber = false;
 
-        if (!memoObject.operator) {
-          updateMemoObject(memoObject, keyType, keyButtonType);
+        if (!memoObject.operator || previousKeyIsEqual) {
+          memoObject.firstValue = display.textContent;
         }
       },
       decimal: () => {
-        updateMemoObject(memoObject, keyType, keyButtonType);
-        if (
-          !isNaN(parseFloat(display.textContent)) &&
-          !display.textContent.includes(".")
-        ) {
+        if (!display.textContent.includes(".")) {
           display.textContent += ".";
-          memoObject.isNewNumber = false;
+        }
+
+        if (!memoObject.operator) {
+          memoObject.firstValue = display.textContent;
         }
       },
       operator: () => {
-        updateMemoObject(memoObject, keyType, keyButtonType);
+        memoObject.operator = keyType;
+        memoObject.isNewNumber = true;
       },
       clear: () => {
-        updateMemoObject(memoObject, keyType, keyButtonType);
-        display.textContent = "0";
-        memoObject.isNewNumber = true;
+        memoObject.firstValue = "0";
         memoObject.operator = "";
-        memoObject.firstValue = "";
+        memoObject.isNewNumber = true;
+        updateDisplay(display, memoObject);
       },
       equal: () => {
         if (!memoObject.operator) {
           return;
         }
-        display.textContent = calculate(
+        const result = calculate(
           memoObject.operator,
           memoObject.firstValue,
           display.textContent
         );
-        memoObject.isNewNumber = true;
+
+        memoObject.firstValue = result;
         memoObject.operator = "";
-        memoObject.firstValue = display.textContent;
+        memoObject.isNewNumber = true;
+        updateDisplay(display, memoObject);
       },
     };
 
@@ -73,42 +79,15 @@ function init(
   return memoObject;
 }
 
-function updateMemoObject(memoObject, keyType, keyButtonType) {
-  const lookupTable = {
-    number: () => {
-      if (memoObject.isNewNumber) {
-        memoObject.firstValue = keyType;
-        memoObject.isNewNumber = false;
-      } else {
-        memoObject.firstValue += keyType;
-      }
-    },
-    operator: () => {
-      memoObject.operator = keyType;
-      memoObject.isNewNumber = true;
-    },
-    decimal: () => {
-      if (!memoObject.firstValue.includes(".")) {
-        memoObject.firstValue += ".";
-        memoObject.isNewNumber = false;
-      }
-    },
-    clear: () => {
-      memoObject.firstValue = "0";
-      memoObject.operator = "";
-      memoObject.isNewNumber = true;
-    },
-    "": () => {},
-  };
 
-  lookupTable[keyButtonType]();
-}
 
 function updateDisplay(display, memoObject) {
   display.textContent = memoObject.firstValue;
 }
 
 function calculate(operator, num1, num2) {
+  const floatNum1 = parseFloat(num1);
+  const floatNum2 = parseFloat(num2);
   const lookupTable = {
     plus: (num1, num2) => num1 + num2,
     minus: (num1, num2) => num1 - num2,
@@ -121,5 +100,5 @@ function calculate(operator, num1, num2) {
     },
   };
 
-  return lookupTable[operator](num1, num2);
+  return lookupTable[operator](floatNum1, floatNum2);
 }
