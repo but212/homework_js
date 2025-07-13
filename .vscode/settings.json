@@ -1,0 +1,10 @@
+{
+  "[markdown]": {
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true
+  },
+  "markdown.validate.enabled": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.markdownlint": "always"
+  }
+}
