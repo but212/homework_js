@@ -15,7 +15,6 @@
     />
     <link rel="icon" href="/assets/images/ecmascript-logo.png" />
     <link rel="stylesheet" href="./styles/main.css" />
-    <script src="./scripts/main.js" defer></script>
   </head>
 
   <body>
@@ -77,8 +76,9 @@
         </div>
       </article>
     </div>
+    <script src="./scripts/main.js"></script>
     <script>
-      init();
+      const memoObject = init(document.querySelector(".calculator"));
     </script>
   </body>
 </html>
