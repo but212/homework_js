@@ -21,15 +21,21 @@ function init(
     const lookupTableButtonType = {
       number: () => {
         const previousKeyIsEqual = memoObject.previousKeyButtonType === "equal";
-        if (
-          memoObject.isNewNumber ||
-          display.textContent === "0" ||
-          previousKeyIsEqual
-        ) {
+        const previousKeyIsDecimal =
+          memoObject.previousKeyButtonType === "decimal";
+        const rewriteCondition =
+          (memoObject.isNewNumber ||
+            display.textContent === "0" ||
+            previousKeyIsEqual) &&
+          !previousKeyIsDecimal &&
+          display.textContent !== "-";
+
+        if (rewriteCondition) {
           display.textContent = keyType;
         } else {
           display.textContent += keyType;
         }
+
         memoObject.isNewNumber = false;
 
         if (!memoObject.operator || previousKeyIsEqual) {
@@ -37,15 +43,38 @@ function init(
         }
       },
       decimal: () => {
-        if (!display.textContent.includes(".")) {
+        if (memoObject.isNewNumber) {
+          display.textContent = "0.";
+          memoObject.isNewNumber = false;
+        } else if (!display.textContent.includes(".")) {
           display.textContent += ".";
-        }
-
-        if (!memoObject.operator) {
-          memoObject.firstValue = display.textContent;
         }
       },
       operator: () => {
+        const previousKeyIsOperator =
+          memoObject.previousKeyButtonType === "operator";
+
+        if (display.textContent === "0" && keyType === "minus") {
+          display.textContent = "-";
+          memoObject.isNewNumber = true;
+          return;
+        }
+
+        const calculateCondition =
+          memoObject.firstValue &&
+          memoObject.operator &&
+          !previousKeyIsOperator;
+
+        if (calculateCondition) {
+          const result = calculate(
+            memoObject.operator,
+            memoObject.firstValue,
+            display.textContent
+          );
+          memoObject.firstValue = result;
+          updateDisplay(display, memoObject);
+        }
+
         memoObject.operator = keyType;
         memoObject.isNewNumber = true;
       },
@@ -75,11 +104,7 @@ function init(
     lookupTableButtonType[keyButtonType]();
     memoObject.previousKeyButtonType = keyButtonType;
   });
-
-  return memoObject;
 }
-
-
 
 function updateDisplay(display, memoObject) {
   display.textContent = memoObject.firstValue;
